@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_shop_app/products/view/pages/settings_page.dart';
 
 import '../../../products/view/components/fruit_item_widget.dart';
 import '../../../products/view/pages/shop_page.dart';
@@ -158,7 +159,10 @@ AppBar _appBar(BuildContext context) {
     actions: [
       IconButton(
         padding: const EdgeInsets.only(right: 25, top: 10),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: ((context) => SettingsPage())));
+        },
         icon: const Icon(
           Icons.menu,
           color: Colors.black,
