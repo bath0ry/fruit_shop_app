@@ -72,20 +72,22 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.yellow[100],
       appBar: _appBar(context),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Fruits and berries',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 25),
-            _search(),
-            const SizedBox(height: 20.0),
-            _itemsList(),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Fruits and berries',
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
+              ),
+              const SizedBox(height: 25),
+              _search(),
+              const SizedBox(height: 20.0),
+              _itemsList(),
+            ],
+          ),
         ),
       ),
     );
@@ -94,6 +96,7 @@ class HomePage extends StatelessWidget {
   Widget _itemsList() {
     return Expanded(
       child: GridView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         padding: const EdgeInsets.symmetric(vertical: 27),
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
