@@ -24,63 +24,65 @@ class ShopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          color: backgroundColor,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 80),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const IconsHeaderWidget(),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: Image.network(imageUrl),
-                ),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 35,
-                    fontWeight: FontWeight.w600,
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            color: backgroundColor,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 80),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const IconsHeaderWidget(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 20),
+                    child: Image.network(imageUrl),
                   ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                ItemCounterWidget(
-                  price: price,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  titleDescription,
-                  style: const TextStyle(
-                      fontSize: 30, fontWeight: FontWeight.w600),
-                ),
-                const SizedBox(
-                  height: 13,
-                ),
-                Text(
-                  productDescription,
-                  style: const TextStyle(
-                      fontSize: 25, fontWeight: FontWeight.w400),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                Row(
-                  children: const [
-                    FavoriteButtonWidget(),
-                    SizedBox(
-                      width: 30,
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.w600,
                     ),
-                    AddToCartButtonWidget()
-                  ],
-                ),
-              ],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  ItemCounterWidget(
+                    price: price,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    titleDescription,
+                    style: const TextStyle(
+                        fontSize: 30, fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(
+                    height: 13,
+                  ),
+                  Text(
+                    productDescription,
+                    style: const TextStyle(
+                        fontSize: 25, fontWeight: FontWeight.w400),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    children: const [
+                      FavoriteButtonWidget(),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      AddToCartButtonWidget()
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
