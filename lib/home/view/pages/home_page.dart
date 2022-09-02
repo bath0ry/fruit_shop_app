@@ -94,42 +94,40 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _itemsList() {
-    return Expanded(
-      child: GridView.builder(
-        physics: const NeverScrollableScrollPhysics(),
-        padding: const EdgeInsets.symmetric(vertical: 27),
-        shrinkWrap: true,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          childAspectRatio: 2 / 2.5,
-          crossAxisCount: 2,
-          mainAxisSpacing: 15,
-          crossAxisSpacing: 10,
-        ),
-        itemCount: _items.length,
-        itemBuilder: (BuildContext context, int index) {
-          return FruitItemWidget(
-            title: _items[index]['title'],
-            measureUnit: _items[index]['measureUnit'],
-            price: _items[index]['price'],
-            imageUrl: _items[index]['imageUrl'],
-            backgroundColor: _items[index]['backgroundColor'],
-            iconColor: _items[index]['iconColor'],
-            titleDescription: _items[index]['titleDescription'],
-            productDescription: _items[index]['productDescription'],
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ShopPage(
-                        backgroundColor: _items[index]['backgroundColor'],
-                        imageUrl: _items[index]['imageUrl'],
-                        title: _items[index]['title'],
-                        price: _items[index]['price'],
-                        productDescription: _items[index]['productDescription'],
-                        titleDescription: _items[index]['titleDescription'],
-                      )));
-            },
-          );
-        },
+    return GridView.builder(
+      physics: const NeverScrollableScrollPhysics(),
+      padding: const EdgeInsets.symmetric(vertical: 27),
+      shrinkWrap: true,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        childAspectRatio: 2 / 2.5,
+        crossAxisCount: 2,
+        mainAxisSpacing: 15,
+        crossAxisSpacing: 10,
       ),
+      itemCount: _items.length,
+      itemBuilder: (BuildContext context, int index) {
+        return FruitItemWidget(
+          title: _items[index]['title'],
+          measureUnit: _items[index]['measureUnit'],
+          price: _items[index]['price'],
+          imageUrl: _items[index]['imageUrl'],
+          backgroundColor: _items[index]['backgroundColor'],
+          iconColor: _items[index]['iconColor'],
+          titleDescription: _items[index]['titleDescription'],
+          productDescription: _items[index]['productDescription'],
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => ShopPage(
+                      backgroundColor: _items[index]['backgroundColor'],
+                      imageUrl: _items[index]['imageUrl'],
+                      title: _items[index]['title'],
+                      price: _items[index]['price'],
+                      productDescription: _items[index]['productDescription'],
+                      titleDescription: _items[index]['titleDescription'],
+                    )));
+          },
+        );
+      },
     );
   }
 }

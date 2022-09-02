@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_shop_app/products/view/components/text_button_widget.dart';
 
 class TextIconsWidgets extends StatelessWidget {
   const TextIconsWidgets({
@@ -16,234 +17,85 @@ class TextIconsWidgets extends StatelessWidget {
               padding: const EdgeInsets.all(5.0),
               child: Text('Minha Conta'),
             ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Meu perfil',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 210,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
+            TextButtonWidget(
+              colorWidget: Colors.black,
+              fontSizeWidget: 18,
+              fontWeightWidget: FontWeight.w600,
+              iconWidget: Icon(Icons.arrow_forward_ios),
+              textWidget: 'Meu Perfil',
+              paddingIcon: const EdgeInsets.only(left: 207),
             ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Meu Endereços',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 168,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Contas Bancárias / Cartões',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 72,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
+            TextButtonWidget(
+                textWidget: 'Meus Endereços',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 158)),
+            TextButtonWidget(
+                textWidget: 'Contas Bancárias/Cartões',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 80)),
             SizedBox(
               height: 25,
             ),
             Text('Definições'),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Configurações do Chat',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 108,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Notificação',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 200,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Privacidade',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 196,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Idioma / Language',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 140,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
+            TextButtonWidget(
+                textWidget: 'Configurações do Chat',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 108)),
+            TextButtonWidget(
+                textWidget: 'Notificação',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 200)),
+            TextButtonWidget(
+                textWidget: 'Privacidade',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 198)),
+            TextButtonWidget(
+                textWidget: 'Idioma/Language',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 152)),
             SizedBox(
               height: 25,
             ),
             Text('Suporte'),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Central de Ajuda',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 156,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Políticas',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 216,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(133, 239, 163, 235))),
-                  child: Text(
-                    'Sobre',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  width: 240,
-                ),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-              ],
-            ),
+            TextButtonWidget(
+                textWidget: 'Central de Ajuda',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 160)),
+            TextButtonWidget(
+                textWidget: 'Políticas',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 223)),
+            TextButtonWidget(
+                textWidget: 'Sobre',
+                fontSizeWidget: 18,
+                fontWeightWidget: FontWeight.w600,
+                colorWidget: Colors.black,
+                iconWidget: Icon(Icons.arrow_forward_ios),
+                paddingIcon: const EdgeInsets.only(left: 245)),
             SizedBox(
               height: 200,
             )
