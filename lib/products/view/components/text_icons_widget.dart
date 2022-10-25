@@ -12,7 +12,7 @@ class TextIconsWidgets extends StatelessWidget {
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: const [
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text('Minha Conta'),

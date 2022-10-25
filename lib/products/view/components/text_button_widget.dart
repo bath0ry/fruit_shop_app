@@ -28,22 +28,20 @@ class TextButtonWidget extends StatelessWidget {
         onTap: () {
           Navigator.of(context).pushNamed(pageRouteNamed);
         },
-        child: GestureDetector(
-          child: Row(
-            children: [
-              Text(
-                textWidget,
-                style: TextStyle(
-                    fontSize: fontSizeWidget,
-                    fontWeight: fontWeightWidget,
-                    color: colorWidget),
-              ),
-              Padding(
-                padding: paddingIcon,
-                child: iconWidget,
-              ),
-            ],
-          ),
+        child: Row(
+          children: [
+            Text(
+              textWidget,
+              style: TextStyle(
+                  fontSize: fontSizeWidget,
+                  fontWeight: fontWeightWidget,
+                  color: colorWidget),
+            ),
+            Padding(
+              padding: paddingIcon,
+              child: iconWidget,
+            ),
+          ],
         ),
       ),
     );
